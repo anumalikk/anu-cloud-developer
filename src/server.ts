@@ -16,7 +16,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   
   // GET /filteredimage?image_url={{URL}}
   // endpoint to filter an image from a public url.
-  app.get("/filteredimage/",async (req:express.Request, res:express.Response)=>{
+  app.get("/filteredimage/",async (req: express.Request, res: express.Response)=>{
     let {image_url}: any = req.query;
     if( !image_url ) {
       return res.status(422)
